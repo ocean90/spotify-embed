@@ -24,6 +24,8 @@ Album embed:
 Playlist embed:
 `http://open.spotify.com/user/sonymusic/playlist/1BVPSd4dynzdlIWehjvkPj`
 
+= Coming soon =
+* Support for Spotify URLs like `spotify:album:4pT0rlFvHYc46KyEhmCy88`.
 
 **Sounds pretty good? Install now!**
 

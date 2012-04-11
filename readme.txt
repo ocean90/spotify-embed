@@ -9,18 +9,20 @@ Easily embed Spotify playlists, albums and tracks into your posts.
 
 == Description ==
 
-Just place a Spotify link into your posts and the plugin will handle the embed code for you. Very easy.
+Just place a Spotify link into your posts and the plugin will insert the Spotify Play Button for you. Very easy.
 
-Some examples:
+The plugin based on the new announced API, see the [offical site here](https://developer.spotify.com/technologies/spotify-play-button/).
+
+= Usage examples =
 
 Track embed:
-'http://open.spotify.com/track/4IJUii1lg0IRLBs0yG1w2p'
+`http://open.spotify.com/track/4IJUii1lg0IRLBs0yG1w2p`
 
 Album embed:
-'http://open.spotify.com/album/4pT0rlFvHYc46KyEhmCy88'
+`http://open.spotify.com/album/4pT0rlFvHYc46KyEhmCy88`
 
 Playlist embed:
-'http://open.spotify.com/user/sonymusic/playlist/1BVPSd4dynzdlIWehjvkPj'
+`http://open.spotify.com/user/sonymusic/playlist/1BVPSd4dynzdlIWehjvkPj`
 
 
 **Sounds pretty good? Install now!**
@@ -34,20 +36,20 @@ Try also some of my [other plugins](http://profiles.wordpress.org/users/ocean90)
 == Frequently Asked Questions ==
 
 = Can I embed the light theme instead of the dark theme? =
-Yes, you can. Just wrap your link into the '[embed][/embed]' shortcode and add the keyword 'light'.
+Yes, you can. Just wrap your link into the `[embed][/embed]` shortcode and add the keyword 'light'.
 Example:
-'[embed light]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]'
+`[embed light]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
 
 = I want to show the cover art, is that possible? =
-Yes. Just wrap your link into the '[embed][/embed]' shortcode and add the keyword 'coverart'.
+Yes. Just wrap your link into the `[embed][/embed]` shortcode and add the keyword 'coverart'.
 Example:
-[embed coverart]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]
+`[embed coverart]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
 
 = Can I customize the size of the embed box? =
-Yes. Just wrap your link into the '[embed][/embed]' shortcode and add the keywords 'height' and/or 'width'.
+Yes. Just wrap your link into the `[embed][/embed]` shortcode and add the keywords 'height' and/or 'width'.
 (Note: Take alsoa look at the [Spotify documentation](https://developer.spotify.com/technologies/spotify-play-button/documentation/))
 Example:
-[embed height="600" width="450"]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]
+`[embed height="600" width="450"]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
 
 = Can I combine all these keywords? =
 Yes.

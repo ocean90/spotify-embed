@@ -49,7 +49,7 @@ Example:
 
 = Can I customize the size of the embed box? =
 Yes. Just wrap your link into the `[embed][/embed]` shortcode and add the keywords 'height' and/or 'width'.
-(Note: Take alsoa look at the [Spotify documentation](https://developer.spotify.com/technologies/spotify-play-button/documentation/))
+(Note: Take also a look at the [Spotify documentation](https://developer.spotify.com/technologies/spotify-play-button/documentation/))
 Example:
 `[embed height="600" width="450"]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
 

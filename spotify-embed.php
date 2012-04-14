@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: Spotify Embed
- * Version: 0.1
- * Description: Just post a Spotify link into your posts and the plugin will add the embed code.
+ * Version: 0.2
+ * Description: Just add Spotify links into your posts and the plugin will add the embed code for you.
  * Author: Dominik Schilling
  * Author URI: http://wphelper.de/
  * Plugin URI: http://wpgrafie.de/wp-plugins/spotify-embed/en/
@@ -48,12 +48,7 @@ final class DS_Spotify_Embed {
 	public static function init() {
 		wp_embed_register_handler(
 			'spotify',
-			'#https?:\/\/open\.spotify\.com\/(?:track|album)\/[a-zA-Z0-9]{22}\/?#i',
-			array( __CLASS__, 'embed_handler_spotify' )
-		);
-		wp_embed_register_handler(
-			'spotify2',
-			'#https?:\/\/open\.spotify\.com\/user\/[^:]+\/playlist\/[a-zA-Z0-9]{22}\/?#i',
+			'#https?:\/\/open\.spotify\.com\/(track|album|user\/(.+?)\/playlist)\/([A-Za-z0-9]{22})\/?#i',
 			array( __CLASS__, 'embed_handler_spotify' )
 		);
 	}
@@ -61,35 +56,56 @@ final class DS_Spotify_Embed {
 	/**
 	 * Callback function for the spotify embeds. Prints the HTML embed code.
 	 *
-	 * @param  [type] $matches [description]
-	 * @param  [type] $attr    [description]
-	 * @param  [type] $url     [description]
-	 * @param  [type] $rawattr [description]
-	 * @return [type]          [description]
+	 * @param  mixed $matches Matches through the regex search.
+	 *               $matches[0] The Spotify URL.
+	 *               $matches[1] The type of embed music (album, track or playlist).
+	 *               $matches[2] If typ is a playlist, it will include the username.
+	 *               $matches[3] The Spotify ID.
+	 * @param  array $attr    Custom attributes from the [embed][/embed] shortcut
+	 * @param  string $url    The matched URL.
+	 * @param  array $rawattr Includes the height and width from media settings
+	 *
+	 * @return string         The HTML embed code.
 	 */
 	public static function embed_handler_spotify( $matches, $attr, $url, $rawattr ) {
-		$id = preg_replace( '/http:\/\/open\.spotify\.com\//', 'spotify:', $url );
-		$id = str_replace( '/', ':', $id );
+		if ( empty( $matches ) )
+			return;
 
-		if ( ! empty( $rawattr['width'] ) && ! empty( $rawattr['height'] ) ) {
-			$width  = (int) $rawattr['width'];
-			$height = (int) $rawattr['height'];
+		$type = str_replace( '/', ':', $matches[1] );
+		$id = $matches[3];
+
+		// Set the size of the embed iframe
+		if ( ! empty( $attr['size'] ) && 'compact' == $attr['size'] ) {
+			$width  = 250;
+			$height = 80;
+		} elseif ( ! empty( $attr['size'] ) && 'large' == $attr['size'] ) {
+			$width  = 640;
+			$height = 720;
 		} else {
-			list( $width, $height ) = wp_expand_dimensions( 300, 380, $attr['width'], $attr['height'] );
+			if ( ! empty( $rawattr['width'] ) && ! empty( $rawattr['height'] ) ) {
+				$width  = (int) $rawattr['width'];
+				$height = (int) $rawattr['height'];
+			} else {
+				list( $width, $height ) = wp_expand_dimensions( 300, 380, $attr['width'], $attr['height'] );
+			}
 		}
 
+		// Generate the base embed source
 		$embed_src = sprintf(
-			'%s?uri=%s',
+			'%s?uri=spotify:%s:%s',
 			self::$spotify_embed_url,
+			$type,
 			$id
 		);
 
+		// Check for custom settings
 		if ( in_array( 'coverart', $attr) )
 			$embed_src = add_query_arg( 'view', 'coverart', $embed_src );
 
 		if ( in_array( 'light', $attr) )
 			$embed_src = add_query_arg( 'theme', 'white', $embed_src );
 
+		// The embed code
 		return sprintf(
 			'<iframe src="%s" width="%s" height="%s" frameborder="0" allowTransparency="true"></iframe>',
 			esc_url( $embed_src ),

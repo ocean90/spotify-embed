@@ -5,35 +5,51 @@ Requires at least: 3.3
 Tested up to: 3.4-alpha
 Stable tag: 0.1
 
-Easily embed Spotify playlists, albums and tracks into your posts.
+Easily embed Spotify playlists, albums and tracks into your posts through the new Spotify Play Button.
 
 == Description ==
 
-Just place a Spotify link into your posts and the plugin will insert the Spotify Play Button for you. Very easy.
+The plugin is based on the new [announced API by Spotify](https://developer.spotify.com/technologies/spotify-play-button/), better known as the Spotify Play Button.
+With this plugin you can easily share you music with other Spotify users.
 
-The plugin based on the new announced API, see the [offical site here](https://developer.spotify.com/technologies/spotify-play-button/).
+**What's your part?**
+Just place a Spotify link into your posts. It can be a link to your favored track or album, but also music playlists are possible.
+And that was about your part. Easy, isn't it?
 
-= Usage examples =
+**What does the plugin?**
+The plugin will fetch your links of your music and will convert it to a sexy Spotify Play Button.
 
-Track embed:
-`http://open.spotify.com/track/4IJUii1lg0IRLBs0yG1w2p`
 
-Album embed:
+= Some usage examples =
+To embed a simple Track just embed a link like this:
+`https://open.spotify.com/track/4IJUii1lg0IRLBs0yG1w2p`
+
+To embed an album just embed a link like this:
 `http://open.spotify.com/album/4pT0rlFvHYc46KyEhmCy88`
 
-Playlist embed:
+Or to embed a complete playlist just embed a link like this:
 `http://open.spotify.com/user/sonymusic/playlist/1BVPSd4dynzdlIWehjvkPj`
+
+For more examples vist the [FAQ section](http://wordpress.org/extend/plugins/spotify-embed/faq/).
+
+**Sounds pretty good? Install now!**
+
 
 = Coming soon =
 * Support for Spotify URLs like `spotify:album:4pT0rlFvHYc46KyEhmCy88`.
 
-**Sounds pretty good? Install now!**
+
 
 = Feedback = 
 If you want, you can drop me a line @[ocean90](http://twitter.com/ocean90) on Twitter or @[Dominik Schilling](https://plus.google.com/u/0/101675293278434581718/) on Google+.
 
+
+
 = More =
-Try also some of my [other plugins](http://profiles.wordpress.org/users/ocean90) or visit my site [wpGrafie.de](http://wpgrafie.de/).
+If you want, you can try also some of my [other plugins](http://profiles.wordpress.org/users/ocean90) or visit my site [wpGrafie.de](http://wpgrafie.de/).
+
+
+
 
 == Frequently Asked Questions ==
 
@@ -42,10 +58,16 @@ Yes, you can. Just wrap your link into the `[embed][/embed]` shortcode and add t
 Example:
 `[embed light]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
 
+
 = I want to show the cover art, is that possible? =
 Yes. Just wrap your link into the `[embed][/embed]` shortcode and add the keyword 'coverart'.
 Example:
 `[embed coverart]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
+
+
+= Where does the plugin get it's default height and width settings? =
+Therefor take a look at the Media settings under `Settings > Media > Embed`.
+
 
 = Can I customize the size of the embed box? =
 Yes. Just wrap your link into the `[embed][/embed]` shortcode and add the keywords 'height' and/or 'width'.
@@ -53,12 +75,24 @@ Yes. Just wrap your link into the `[embed][/embed]` shortcode and add the keywor
 Example:
 `[embed height="600" width="450"]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
 
+Another option is the use of the `size` keyword. You can use `size="compact"` (80x250px) or `size="large"` (720x640px).
+Example:
+`[embed size="compact"]http://open.spotify.com/user/spotify/playlist/3Yrvm5lBgnhzTYTXx2l55x[/embed]`
+
+
 = Can I combine all these keywords? =
-Yes.
+Yes. (But don't try to combine the size keywords, or the sky will fall on your head)
+
+
+
 
 == Screenshots ==
 
-1. How it will look.
+1. An example of an embed track.
+2. Here you can get the HTML link of your track, album or playlist, which you can insert into your content.
+
+
+
 
 == Installation ==
 
@@ -81,7 +115,23 @@ To upload the plugin through WordPress, instead of FTP:
 
 1. Upload the downloaded zip file on the 'Add New' plugins screen (see the 'Upload' tab) in your WordPress admin area and activate.
 
+
+
+
 == Changelog ==
-= 0.1.0 =
+= 0.2 =
+* Performance boost by reducing to only one regular expression, thanks to Jens Tautenhahn.
+* New keyword: `size`. (Use `size="compact"` or `size="large"`.)
+
+= 0.1 =
 * First release.
+
+
+
+
+
+== Upgrade Notice ==
+
+= 0.2 =
+Performance boost and a new keyword for default size. You can use size="compact" or size="large" now.
 

@@ -1,7 +1,7 @@
 === Spotify Embed ===
 Contributors: ocean90
 Tags: Spotify, WP Embed, embed, music
-Requires at least: 3.3
+Requires at least: 2.9
 Tested up to: 3.4-alpha
 Stable tag: 0.2
 
@@ -12,11 +12,11 @@ Easily embed Spotify playlists, albums and tracks into your posts through the ne
 The plugin is based on the new [announced API by Spotify](https://developer.spotify.com/technologies/spotify-play-button/), better known as the Spotify Play Button.
 With this plugin you can easily share you music with other Spotify users.
 
-**What's your part?**
+= What's your part? =
 Just place a Spotify link into your posts. It can be a link to your favored track or album, but also music playlists are possible.
 And that was about your part. Easy, isn't it?
 
-**What does the plugin?**
+= What does the plugin? =
 The plugin will fetch your links of your music and will convert it to a sexy Spotify Play Button.
 
 

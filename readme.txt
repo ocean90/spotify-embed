@@ -14,6 +14,7 @@ With this plugin you can easily share you music with other Spotify users.
 
 = What's your part? =
 Just place a Spotify link into your posts. It can be a link to your favored track or album, but also music playlists are possible.
+**For default use no shortcodes are necessary, just a link!**
 And that was about your part. Easy, isn't it?
 
 = What does the plugin? =

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Spotify Embed
- * Version: 0.2
+ * Version: 0.2.1
  * Description: Just add Spotify links into your posts and the plugin will add the embed code for you.
  * Author: Dominik Schilling
  * Author URI: http://wphelper.de/
@@ -48,7 +48,7 @@ final class DS_Spotify_Embed {
 	public static function init() {
 		wp_embed_register_handler(
 			'spotify',
-			'#https?:\/\/open\.spotify\.com\/(track|album|user\/(.+?)\/playlist)\/([A-Za-z0-9]{22})\/?#i',
+			'#https?:\/\/open\.spotify\.com\/(track|album|user\/.+?\/playlist)\/([a-z0-9]{22})\/?#i',
 			array( __CLASS__, 'embed_handler_spotify' )
 		);
 	}
@@ -59,8 +59,7 @@ final class DS_Spotify_Embed {
 	 * @param  mixed $matches Matches through the regex search.
 	 *               $matches[0] The Spotify URL.
 	 *               $matches[1] The type of embed music (album, track or playlist).
-	 *               $matches[2] If typ is a playlist, it will include the username.
-	 *               $matches[3] The Spotify ID.
+	 *               $matches[2] The Spotify ID.
 	 * @param  array $attr    Custom attributes from the [embed][/embed] shortcut
 	 * @param  string $url    The matched URL.
 	 * @param  array $rawattr Includes the height and width from media settings
@@ -72,7 +71,7 @@ final class DS_Spotify_Embed {
 			return;
 
 		$type = str_replace( '/', ':', $matches[1] );
-		$id = $matches[3];
+		$id = $matches[2];
 
 		// Set the size of the embed iframe
 		if ( ! empty( $attr['size'] ) && 'compact' == $attr['size'] ) {
@@ -83,8 +82,8 @@ final class DS_Spotify_Embed {
 			$height = 720;
 		} else {
 			if ( ! empty( $rawattr['width'] ) && ! empty( $rawattr['height'] ) ) {
-				$width  = (int) $rawattr['width'];
-				$height = (int) $rawattr['height'];
+				$width  = $rawattr['width'];
+				$height = $rawattr['height'];
 			} else {
 				list( $width, $height ) = wp_expand_dimensions( 300, 380, $attr['width'], $attr['height'] );
 			}
@@ -99,18 +98,18 @@ final class DS_Spotify_Embed {
 		);
 
 		// Check for custom settings
-		if ( in_array( 'coverart', $attr) )
+		if ( in_array( 'coverart', $attr ) )
 			$embed_src = add_query_arg( 'view', 'coverart', $embed_src );
 
-		if ( in_array( 'light', $attr) )
+		if ( in_array( 'light', $attr ) )
 			$embed_src = add_query_arg( 'theme', 'white', $embed_src );
 
 		// The embed code
 		return sprintf(
-			'<iframe src="%s" width="%s" height="%s" frameborder="0" allowTransparency="true"></iframe>',
+			'<iframe src="%s" width="%d" height="%d" frameborder="0" allowTransparency="true"></iframe>',
 			esc_url( $embed_src ),
-			esc_attr( $width ),
-			esc_attr( $height )
+			(int) $width,
+			(int) $height
 		);
 	}
 }

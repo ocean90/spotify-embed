@@ -120,11 +120,14 @@ To upload the plugin through WordPress, instead of FTP:
 
 
 == Changelog ==
-= 0.2 =
+= 0.2.1 =
+* Removes one unused matching group to increase performance, thanks to Sergej Müller
+
+= 0.2.0 =
 * Performance boost by reducing to only one regular expression, thanks to Jens Tautenhahn.
 * New keyword: `size`. (Use `size="compact"` or `size="large"`.)
 
-= 0.1 =
+= 0.1.0 =
 * First release.
 
 

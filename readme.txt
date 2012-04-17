@@ -3,7 +3,7 @@ Contributors: ocean90
 Tags: Spotify, WP Embed, Embed, Music, Spotfiy Play Button
 Requires at least: 2.9
 Tested up to: 3.4
-Stable tag: 0.2
+Stable tag: 0.2.1
 
 Easily embed Spotify playlists, albums and tracks into your posts through the new Spotify Play Button.
 

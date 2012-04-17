@@ -1,25 +1,26 @@
 === Spotify Embed ===
 Contributors: ocean90
-Tags: Spotify, WP Embed, embed, music
+Tags: Spotify, WP Embed, Embed, Music, Spotfiy Play Button
 Requires at least: 2.9
 Tested up to: 3.4
 Stable tag: 0.2
 
 Easily embed Spotify playlists, albums and tracks into your posts through the new Spotify Play Button.
 
+
+
 == Description ==
 
-The plugin is based on the new [announced API by Spotify](https://developer.spotify.com/technologies/spotify-play-button/), better known as the Spotify Play Button.
-With this plugin you can easily share you music with other Spotify users.
+Spotify Embed is based on the new [API by Spotify](https://developer.spotify.com/technologies/spotify-play-button/), better known as the Spotify Play Button.
+With Spotify Embed you can easily share your favored music tracks, albums and playlists with other Spotify users.
 
 = What's your part? =
 Just place a Spotify link into your posts. It can be a link to your favored track or album, but also music playlists are possible.
-**For default use no shortcodes are necessary, just a link!**
+**By default no shortcodes are necessary, just a link!**
 And that was about your part. Easy, isn't it?
 
 = What does the plugin? =
 The plugin will fetch your links of your music and will convert it to a sexy Spotify Play Button.
-
 
 = Some usage examples =
 To embed a simple Track just embed a link like this:
@@ -31,10 +32,9 @@ To embed an album just embed a link like this:
 Or to embed a complete playlist just embed a link like this:
 `http://open.spotify.com/user/sonymusic/playlist/1BVPSd4dynzdlIWehjvkPj`
 
-For more examples vist the [FAQ section](http://wordpress.org/extend/plugins/spotify-embed/faq/).
+For more examples please vist the [FAQ section](http://wordpress.org/extend/plugins/spotify-embed/faq/).
 
 **Sounds pretty good? Install now!**
-
 
 = Coming soon =
 * Support for Spotify URLs like `spotify:album:4pT0rlFvHYc46KyEhmCy88`.
@@ -42,7 +42,7 @@ For more examples vist the [FAQ section](http://wordpress.org/extend/plugins/spo
 
 
 = Feedback = 
-If you want, you can drop me a line @[ocean90](http://twitter.com/ocean90) on Twitter or @[Dominik Schilling](https://plus.google.com/u/0/101675293278434581718/) on Google+.
+If you want, you can drop me a line @[ocean90](http://twitter.com/ocean90) on Twitter or @[Dominik Schilling](https://plus.google.com/101675293278434581718/) on Google+.
 
 
 
@@ -121,7 +121,7 @@ To upload the plugin through WordPress, instead of FTP:
 
 == Changelog ==
 = 0.2.1 =
-* Removes one unused matching group to increase performance, thanks to Sergej Müller
+* Removes one unused matching group to increase performance, thanks to Sergej Müller.
 
 = 0.2.0 =
 * Performance boost by reducing to only one regular expression, thanks to Jens Tautenhahn.

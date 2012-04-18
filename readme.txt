@@ -40,6 +40,8 @@ For more examples please vist the [FAQ section](http://wordpress.org/extend/plug
 * Support for Spotify URLs like `spotify:album:4pT0rlFvHYc46KyEhmCy88`.
 
 
+*Spotify Embed is not associated in any way with Spotify by Spotify Ltd.*
+
 
 = Feedback = 
 If you want, you can drop me a line @[ocean90](http://twitter.com/ocean90) on Twitter or @[Dominik Schilling](https://plus.google.com/101675293278434581718/) on Google+.

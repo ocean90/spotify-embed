@@ -1,13 +1,14 @@
 === Spotify Embed ===
 Contributors: ocean90
 Tags: Spotify, WP Embed, Embed, Music, Spotfiy Play Button
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VR8YU922B7K46
 Requires at least: 2.9
-Tested up to: 3.4
+Tested up to: 3.5
 Stable tag: 0.2.1
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily embed Spotify playlists, albums and tracks into your posts through the new Spotify Play Button.
-
-
 
 == Description ==
 

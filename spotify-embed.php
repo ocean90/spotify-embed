@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Spotify Embed
- * Version: 0.2.1
+ * Version: 0.0.1
  * Description: Just add Spotify links into your posts and the plugin will add the embed code for you.
  * Author: Dominik Schilling
  * Author URI: http://wphelper.de/

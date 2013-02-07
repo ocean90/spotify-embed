@@ -93,10 +93,10 @@ Yes. (But don't try to combine the size keywords, or the sky will fall on your h
 ## Screenshots ##
 
 ###1. An example of an embed track.###
-![An example of an embed track.](http://s-plugins.wordpress.org/spotify-embed/assets/screenshot-1.png)
+![An example of an embed track.](https://raw.github.com/ocean90/spotify-embed/master/assets-wp-repo/screenshot-1.png)
 
 ###2. Here you can get the HTML link of your track, album or playlist, which you can insert into your content.###
-![Here you can get the HTML link of your track, album or playlist, which you can insert into your content.](http://s-plugins.wordpress.org/spotify-embed/assets/screenshot-2.png)
+![Here you can get the HTML link of your track, album or playlist, which you can insert into your content.](https://raw.github.com/ocean90/spotify-embed/master/assets-wp-repo/screenshot-2.png)
 
 
 

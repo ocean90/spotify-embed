@@ -44,7 +44,7 @@ For more examples please vist the [FAQ section](http://wordpress.org/extend/plug
 *Spotify Embed is not associated in any way with Spotify by Spotify Ltd.*
 
 
-= Feedback = 
+= Feedback =
 If you want, you can drop me a line @[ocean90](http://twitter.com/ocean90) on Twitter or @[Dominik Schilling](https://plus.google.com/101675293278434581718/) on Google+.
 
 
@@ -141,4 +141,3 @@ To upload the plugin through WordPress, instead of FTP:
 
 = 0.2 =
 Performance boost and a new keyword for default size. You can use size="compact" or size="large" now.
-
